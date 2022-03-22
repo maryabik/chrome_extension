@@ -81,9 +81,9 @@ export default class BubbleChart extends React.PureComponent<IBubbleChartProps, 
   renderBubbles = (data: [])=> {
     return data.map((item : Types.ForceDataComplete, index) => {
       const {props} = this
-      const fontSize = this.radiusScale((item as unknown as Types.ForceData).size) / 4
+      const fontSize = this.radiusScale((item as unknown as Types.ForceData).size) / 3
       const content = props.bubblesData.length > index ? props.bubblesData[index].name : ''
-      const strokeColor = props.bubblesData.length > index ? 'darkgrey' : this.props.backgroundColor
+      const strokeColor = props.bubblesData.length > index ? 'black' : this.props.backgroundColor
       return (
          <g
              key={`g=${uuid}`}
@@ -117,16 +117,16 @@ export default class BubbleChart extends React.PureComponent<IBubbleChartProps, 
     return (
         <>
           <div>
-            <Button
-                className="buttonFixed"
-                variant="contained"
-                color="default"
-                onClick={() => {
-                  this.animateBubbles();
-                }}
-            >
-              Animate
-            </Button>
+            {/*<Button*/}
+            {/*    className="buttonFixed"*/}
+            {/*    variant="contained"*/}
+            {/*    color="default"*/}
+            {/*    onClick={() => {*/}
+            {/*      this.animateBubbles();*/}
+            {/*    }}*/}
+            {/*>*/}
+            {/*  Animate*/}
+            {/*</Button>*/}
 
             <div aria-hidden="true" id="chart" style={{background: this.props.backgroundColor, cursor: 'pointer'}}>
               <svg width={this.props.width} height={this.props.height}>
