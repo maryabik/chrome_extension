@@ -129,18 +129,11 @@ export default class BubbleChart extends React.PureComponent<IBubbleChartProps, 
             {/*</Button>*/}
 
             <div aria-hidden="true" id="chart" style={{background: this.props.backgroundColor, cursor: 'pointer'}}>
-              <svg width={this.props.width} height={this.props.height}>
+              <svg width={this.props.width}
+                   height={this.props.height}>
                 {this.renderBubbles(this.state.data as [])}
               </svg>
             </div>
-          </div>
-          <div className="chart" style={{background: this.props.backgroundColor, cursor: 'pointer'}}>
-            <svg
-                width={this.props.width}
-                height={this.props.height}
-            >
-              {this.renderBubbles(this.state.data as [])}
-            </svg>
           </div>
         </>
     )
