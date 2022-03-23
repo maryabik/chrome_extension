@@ -15,7 +15,15 @@ describe('<BubbleChart />', () => {
 
   beforeEach(() => {
     component = shallow(
-          <BubbleChart bubblesData={[]} width={800} height={600} textFillColor="drakgrey" backgroundColor="#ffffff" minValue={1} maxValue={150} />
+          <BubbleChart
+              bubblesData={[]}
+              width={800}
+              height={600}
+              textFillColor="drakgrey"
+              backgroundColor="#ffffff"
+              minValue={1} maxValue={150}
+
+          />
     )
   })
 

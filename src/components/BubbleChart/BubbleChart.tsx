@@ -114,6 +114,7 @@ export default class BubbleChart extends React.PureComponent<IBubbleChartProps, 
     })
   }
   render() {
+
     return (
         <>
           <div>
