@@ -5,9 +5,6 @@ export default class Generated_password extends React.PureComponent {
     render() {
         return(
             <>
-                <div className="generated">
-                    Generated_password Component
-                </div>
                 <div className="card">
                     <div className="card-body">
                         <h5 className="card-title text-center">Password Card</h5>
@@ -17,7 +14,7 @@ export default class Generated_password extends React.PureComponent {
                             reload for a new password.
                         </p>
                         <input/>
-                        <button  className="card-link" onClick={() => this.fetchData("dfd")}><i className=" icon1 fa fa-refresh fa-spin"></i></button>
+                        <button  className="card-link" onClick={() => this.fetchData()}><i className=" icon1 fa fa-refresh fa-spin"></i></button>
                         <button  className="card-link" onClick={() => alert("You have selected this password")}><i className=" icon2 fa fa-check"></i></button>
                     </div>
                 </div>
@@ -25,8 +22,8 @@ export default class Generated_password extends React.PureComponent {
             )
     }
 
-    fetchData = val => {
-        alert(val);
+    fetchData = () => {
+        return <Generated_password />
     };
 }
 

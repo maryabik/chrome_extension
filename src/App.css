@@ -19,6 +19,10 @@
     left: -100px;
     top: 60px;
 }
+.card-text {
+    color: black;
+    font-size: 16px;
+}
 .App-header {
     background-color: white;
     min-height: 100vh;
@@ -41,4 +45,27 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.card {
+    width: 25rem;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.generated {
+    text-align: center;
+}
+
+.icon {
+    color: black;
+}
+.icons {
+    margin-top: 20px;
+   margin-right: 50px;
+}
+
+
+button {
+    margin-left: 20px;
 }

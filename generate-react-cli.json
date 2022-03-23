@@ -1,7 +1,7 @@
 {
   "usesTypeScript": true,
   "usesCssModule": false,
-  "cssPreprocessor": "scss",
+  "cssPreprocessor": "css",
   "testLibrary": "Enzyme",
   "component": {
     "default": {
@@ -14,7 +14,7 @@
     "page": {
       "customTemplates": {
         "component": "templates/page/component.tsx",
-        "style": "templates/page/style.scss",
+        "style": "templates/page/style.css",
         "test": "templates/page/test.tsx"
       },
       "path": "src/pages",

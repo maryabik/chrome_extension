@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect, useCallback, useRef} from 'react';
 
 import './App.css';
 import {Button, Card} from '@material-ui/core';
@@ -7,6 +7,7 @@ import {Types} from "./components/BubbleChart/types";
 
 import BubbleChart from "./components/BubbleChart/BubbleChart";
 import Pagination from "./components/Pagination/Pagination";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 import Generated_password from "./components/Generated_password/Generated_password";
 import Navigation from "./components/Navigation/Navigation";
@@ -91,12 +92,15 @@ function App() {
     { id: 68, name: ':(( ', size: 150, fillColor: '#FFAAA6' },
     { id: 69, name: '<3', size: 150, fillColor: '#FF8C94' },
     { id: 70, name: ':s', size: 150, fillColor: '#FF8C94' },
+
   ]
 
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
+  const [page, setPage] = useState([]);
 
+  const password = useRef(null);
   useEffect(() => {
     const fetchPosts = async () => {
       // const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
@@ -111,7 +115,8 @@ function App() {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost);
-  const [active, setActive] = useState("FirstCard")
+  const [show, setShow] = useState(false)
+  const [inputValue, setInputValue] = useState("")
 
   const words = []
 
@@ -132,6 +137,10 @@ function App() {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
   }
+
+  const fetchData = () => {
+    alert("okay");
+  };
 
   return (
     <div className="App">
@@ -167,12 +176,40 @@ function App() {
         {/*<a className="btn btn-primary" href="/password" role="button">Link</a>*/}
         {/*<button className="btn btn-primary" type="submit"><a href="/password"></a>Button</button>*/}
 
-        <a href="/password">
-          <input type="submit" value = "Generate Password"/>
-        </a>
+        <br />
+
+        <button type="submit" onClick={() => setShow(true)}>Generate Password</button>
+
+          <div className="card">
+            {
+
+              show?
+            <div className="card-body">
+              <h6 className="card-subtitle mb-2 text-muted">Password Card</h6>
+              <p className="card-text">Check for interested password or reload for a new password.</p>
+              <input
+              type="text"
+              value={inputValue}
+              onChange={e => setInputValue(e.target.value)}
+              />
+              <CopyToClipboard text={inputValue} onCopy={() => setInputValue.length != 0 ? alert("Password Copied!") : null}>
+                <button>Copy</button>
+              </CopyToClipboard>
+
+              <br />
+
+              <div className="icons">
+              <button  className="card-link" onClick={() => fetchData()}><i className=" icon fa fa-refresh fa-spin"></i></button>
+              <button  className="card-link" onClick={() => alert("You have selected this password")}><i className=" icon fa fa-check"></i></button>
+              </div>
+            </div>
+                  :null
+            }
+          </div>
 
       </header>
     </div>
+
   );
 
 }
