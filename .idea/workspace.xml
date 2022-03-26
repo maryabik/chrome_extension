@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03eeba05-1b3b-4adb-b46b-7b5695822bd7" name="Changes" comment="- Add Password Card&#10;- Added the icons with copy function." />
+    <list default="true" id="03eeba05-1b3b-4adb-b46b-7b5695822bd7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chrome_extension/src/setupTests.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +159,7 @@
       <workItem from="1647007432249" duration="22428000" />
       <workItem from="1647833233938" duration="12129000" />
       <workItem from="1647981903645" duration="42815000" />
-      <workItem from="1648332055249" duration="2136000" />
+      <workItem from="1648332055249" duration="2560000" />
     </task>
     <task id="LOCAL-00001" summary="First BubleCharts Implementation">
       <created>1647834223278</created>
@@ -153,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648066249876</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- create react application">
+      <created>1648334373190</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648334373190</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +217,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First BubleCharts Implementation" />
     <MESSAGE value="- Add Password Card&#10;- Added the icons with copy function." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Add Password Card&#10;- Added the icons with copy function." />
+    <MESSAGE value="- create react application" />
+    <option name="LAST_COMMIT_MESSAGE" value="- create react application" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
