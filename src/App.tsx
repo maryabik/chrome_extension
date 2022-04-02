@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useCallback, useRef} from 'react';
 
 import './App.css';
+
 import {Button, Card} from '@material-ui/core';
 import {Link, Route, Routes, useNavigate, BrowserRouter as Router} from 'react-router-dom';
 import {Types} from "./components/BubbleChart/types";
@@ -8,105 +9,112 @@ import {Types} from "./components/BubbleChart/types";
 import BubbleChart from "./components/BubbleChart/BubbleChart";
 import Pagination from "./components/Pagination/Pagination";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import axios from "axios"
 
 import Generated_password from "./components/Generated_password/Generated_password";
 import Navigation from "./components/Navigation/Navigation";
 
-
 function App() {
 
-  const d: Types.Data[] = [
-    { id: 1, name: 'Rabbit', size: 150, fillColor: '#A8E6CE' },
-    { id: 2, name: 'Dog', size: 150, fillColor: '#A8E6CE' },
-    { id: 3, name: 'Hoody', size: 150, fillColor: '#FFD3B5' },
-    { id: 4, name: 'Jeans', size: 150, fillColor: '#FFD3B5' },
-    { id: 5, name: 'Coffee', size: 150, fillColor: '#DCEDC2' },
-    { id: 6, name: 'Yogurt', size: 150, fillColor: '#DCEDC2' },
-    { id: 7, name: 'Pizza', size: 150, fillColor: '#FFAAA6' },
-    { id: 8, name: 'Pasta ', size: 150, fillColor: '#FFAAA6' },
-    { id: 9, name: 'Swim', size: 150, fillColor: '#FF8C94' },
-    { id: 10, name: 'Jog', size: 150, fillColor: '#FF8C94' },
-      //
-    { id: 11, name: 'Cat', size: 150, fillColor: '#A8E6CE' },
-    { id: 12, name: 'Goat', size: 150, fillColor: '#A8E6CE' },
-    { id: 13, name: 'Hoody', size: 150, fillColor: '#FFD3B5' },
-    { id: 14, name: 'Jeans', size: 150, fillColor: '#FFD3B5' },
-    { id: 15, name: 'Coffee', size: 150, fillColor: '#DCEDC2' },
-    { id: 16, name: 'Milk', size: 150, fillColor: '#DCEDC2' },
-    { id: 17, name: 'Pizza', size: 150, fillColor: '#FFAAA6' },
-    { id: 18, name: 'Pasta ', size: 150, fillColor: '#FFAAA6' },
-    { id: 19, name: 'Swim', size: 150, fillColor: '#FF8C94' },
-    { id: 20, name: 'Jog', size: 150, fillColor: '#FF8C94' },
-
-    { id: 21, name: 'Horse', size: 150, fillColor: '#A8E6CE' },
-    { id: 22, name: 'Mice', size: 150, fillColor: '#A8E6CE' },
-    { id: 23, name: 'Hoody', size: 150, fillColor: '#FFD3B5' },
-    { id: 24, name: 'Jeans', size: 150, fillColor: '#FFD3B5' },
-    { id: 25, name: 'Coffee', size: 150, fillColor: '#DCEDC2' },
-    { id: 26, name: 'Yogurt', size: 150, fillColor: '#DCEDC2' },
-    { id: 27, name: 'Sushi', size: 150, fillColor: '#FFAAA6' },
-    { id: 28, name: 'Pasta ', size: 150, fillColor: '#FFAAA6' },
-    { id: 29, name: 'Swim', size: 150, fillColor: '#FF8C94' },
-    { id: 30, name: 'Jog', size: 150, fillColor: '#FF8C94' },
-
-    { id: 31, name: 'Rabbit', size: 150, fillColor: '#A8E6CE' },
-    { id: 32, name: 'Dog', size: 150, fillColor: '#A8E6CE' },
-    { id: 33, name: 'Hoody', size: 150, fillColor: '#FFD3B5' },
-    { id: 34, name: 'Jeans', size: 150, fillColor: '#FFD3B5' },
-    { id: 35, name: 'Coffee', size: 150, fillColor: '#DCEDC2' },
-    { id: 36, name: 'Yogurt', size: 150, fillColor: '#DCEDC2' },
-    { id: 37, name: 'Pizza', size: 150, fillColor: '#FFAAA6' },
-    { id: 38, name: 'Pasta ', size: 150, fillColor: '#FFAAA6' },
-    { id: 39, name: 'Swim', size: 150, fillColor: '#FF8C94' },
-    { id: 40, name: 'Jog', size: 150, fillColor: '#FF8C94' },
-
-    { id: 41, name: 'Rabbit', size: 150, fillColor: '#A8E6CE' },
-    { id: 42, name: 'Dog', size: 150, fillColor: '#A8E6CE' },
-    { id: 43, name: 'Hoody', size: 150, fillColor: '#FFD3B5' },
-    { id: 44, name: 'Jeans', size: 150, fillColor: '#FFD3B5' },
-    { id: 45, name: 'Coffee', size: 150, fillColor: '#DCEDC2' },
-    { id: 46, name: 'Yogurt', size: 150, fillColor: '#DCEDC2' },
-    { id: 47, name: 'Pizza', size: 150, fillColor: '#FFAAA6' },
-    { id: 48, name: 'Pasta ', size: 150, fillColor: '#FFAAA6' },
-    { id: 49, name: 'Swim', size: 150, fillColor: '#FF8C94' },
-    { id: 50, name: 'Jog', size: 150, fillColor: '#FF8C94' },
-
-    { id: 51, name: '0', size: 150, fillColor: '#A8E6CE' },
-    { id: 52, name: '1', size: 150, fillColor: '#A8E6CE' },
-    { id: 53, name: '2', size: 150, fillColor: '#FFD3B5' },
-    { id: 54, name: '3', size: 150, fillColor: '#FFD3B5' },
-    { id: 55, name: '4', size: 150, fillColor: '#DCEDC2' },
-    { id: 56, name: '5', size: 150, fillColor: '#DCEDC2' },
-    { id: 57, name: '6', size: 150, fillColor: '#FFAAA6' },
-    { id: 58, name: '7 ', size: 150, fillColor: '#FFAAA6' },
-    { id: 59, name: '8', size: 150, fillColor: '#FF8C94' },
-    { id: 60, name: '9', size: 150, fillColor: '#FF8C94' },
-
-    { id: 61, name: ':o', size: 150, fillColor: '#A8E6CE' },
-    { id: 62, name: ':/', size: 150, fillColor: '#A8E6CE' },
-    { id: 63, name: ':D', size: 150, fillColor: '#FFD3B5' },
-    { id: 64, name: ';)', size: 150, fillColor: '#FFD3B5' },
-    { id: 65, name: ':)', size: 150, fillColor: '#DCEDC2' },
-    { id: 66, name: ':(', size: 150, fillColor: '#DCEDC2' },
-    { id: 67, name: '=)', size: 150, fillColor: '#FFAAA6' },
-    { id: 68, name: ':(( ', size: 150, fillColor: '#FFAAA6' },
-    { id: 69, name: '<3', size: 150, fillColor: '#FF8C94' },
-    { id: 70, name: ':s', size: 150, fillColor: '#FF8C94' },
-
-  ]
+  // const d: Types.Data[] = [
+  //   { id: 1, name: 'Rabbit', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 2, name: 'Dog', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 3, name: 'Hoody', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 4, name: 'Jeans', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 5, name: 'Coffee', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 6, name: 'Yogurt', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 7, name: 'Pizza', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 8, name: 'Pasta ', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 9, name: 'Swim', size: 150, fillColor: '#FF8C94' },
+  //   { id: 10, name: 'Jog', size: 150, fillColor: '#FF8C94' },
+  //     //
+  //   { id: 11, name: 'Cat', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 12, name: 'Goat', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 13, name: 'Hoody', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 14, name: 'Jeans', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 15, name: 'Coffee', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 16, name: 'Milk', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 17, name: 'Pizza', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 18, name: 'Pasta ', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 19, name: 'Swim', size: 150, fillColor: '#FF8C94' },
+  //   { id: 20, name: 'Jog', size: 150, fillColor: '#FF8C94' },
+  //
+  //   { id: 21, name: 'Horse', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 22, name: 'Mice', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 23, name: 'Hoody', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 24, name: 'Jeans', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 25, name: 'Coffee', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 26, name: 'Yogurt', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 27, name: 'Sushi', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 28, name: 'Pasta ', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 29, name: 'Swim', size: 150, fillColor: '#FF8C94' },
+  //   { id: 30, name: 'Jog', size: 150, fillColor: '#FF8C94' },
+  //
+  //   { id: 31, name: 'Rabbit', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 32, name: 'Dog', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 33, name: 'Hoody', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 34, name: 'Jeans', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 35, name: 'Coffee', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 36, name: 'Yogurt', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 37, name: 'Pizza', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 38, name: 'Pasta ', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 39, name: 'Swim', size: 150, fillColor: '#FF8C94' },
+  //   { id: 40, name: 'Jog', size: 150, fillColor: '#FF8C94' },
+  //
+  //   { id: 41, name: 'Rabbit', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 42, name: 'Dog', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 43, name: 'Hoody', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 44, name: 'Jeans', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 45, name: 'Coffee', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 46, name: 'Yogurt', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 47, name: 'Pizza', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 48, name: 'Pasta ', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 49, name: 'Swim', size: 150, fillColor: '#FF8C94' },
+  //   { id: 50, name: 'Jog', size: 150, fillColor: '#FF8C94' },
+  //
+  //   { id: 51, name: '0', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 52, name: '1', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 53, name: '2', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 54, name: '3', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 55, name: '4', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 56, name: '5', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 57, name: '6', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 58, name: '7 ', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 59, name: '8', size: 150, fillColor: '#FF8C94' },
+  //   { id: 60, name: '9', size: 150, fillColor: '#FF8C94' },
+  //
+  //   { id: 61, name: ':o', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 62, name: ':/', size: 150, fillColor: '#A8E6CE' },
+  //   { id: 63, name: ':D', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 64, name: ';)', size: 150, fillColor: '#FFD3B5' },
+  //   { id: 65, name: ':)', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 66, name: ':(', size: 150, fillColor: '#DCEDC2' },
+  //   { id: 67, name: '=)', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 68, name: ':(( ', size: 150, fillColor: '#FFAAA6' },
+  //   { id: 69, name: '<3', size: 150, fillColor: '#FF8C94' },
+  //   { id: 70, name: ':s', size: 150, fillColor: '#FF8C94' },
+  //
+  // ]
 
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
   const [page, setPage] = useState([]);
+  const [word, setWord] = useState([]);
+  const [password, setPassword] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+  let res;
+  let i = 0;
+  let count = 3;
+  let initialState = [];
 
-  const password = useRef(null);
   useEffect(() => {
     const fetchPosts = async () => {
-      // const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
-      // setData(res.data);
       // @ts-ignore
-      setData(d)
+      res = await axios.get('https://hidden-journey-03583.herokuapp.com/getWords?number=100');
+      setData(res.data);
+      setPassword(initialState);
+      setInputValue("");
     };
     fetchPosts();
   }, []);
@@ -118,19 +126,66 @@ function App() {
   const [show, setShow] = useState(false)
   const [inputValue, setInputValue] = useState("")
 
-  const words = []
 
   const changeData = () => {
     // @ts-ignore
-    setData(d)
+   setData(res);
+  }
+
+  const setWords = () => {
+    console.log(inputValue)
+    console.log(password);
+    // @ts-ignore
+    let testWords =   {
+      "choices": ["animals", "animals", "clothes", "animals", "animals", "animals", "animals", "sports", "games", "food", "9", "1", ":(", ":)"]
+    }
+    const article = { choices: word };
+
+    let url = 'https://hidden-journey-03583.herokuapp.com/buildModel?client_id=1';
+    console.log(article);
+    try {
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(article)
+      };
+      // console.log(testWords);
+      fetch(url, requestOptions)
+          .then(r => check(r))
+    } catch (error) {
+     console.log(error)
+    }
+
+  }
+
+  const check = (r) => {
+console.log(r.status)
+console.log("check")
+    if(r.status == 200 ) {
+      setLoading(true);
+      getPassword();
+    }
+  }
+
+
+  const getPassword = () => {
+   axios.get('https://hidden-journey-03583.herokuapp.com/generatePassword/?n=3&client_id=1')
+  .then(response => setPassword(response.data))
+   console.log(password);
+    setLoading(false);
+    setShow(true)
+  }
+
+  if (isLoading) {
+    return <div className="App">Loading...</div>;
   }
 
   const selectedKeyHandler = (key: string) => {
+
     // @ts-ignore
-    words.push(key)
+    setWord([...word, key])
     // eslint-disable-next-line no-alert
     //  alert(words)
-    alert('You have selected: ' + key);
   }
 
   // Change page
@@ -138,8 +193,17 @@ function App() {
     setCurrentPage(pageNumber)
   }
 
-  const fetchData = () => {
-    alert("okay");
+  const changePassword = () => {
+    console.log("Changing password")
+    i++;
+    console.log(i)
+    if(i < password.length){
+      // @ts-ignore
+      document.getElementById('pcount').value = password[i];
+    }
+    else if(i >= password.length - 1) {
+      getPassword()
+    }
   };
 
   return (
@@ -178,7 +242,7 @@ function App() {
 
         <br />
 
-        <button type="submit" onClick={() => setShow(true)}>Generate Password</button>
+        <button type="submit" onClick={() => setWords()}>Generate Password</button>
 
           <div className="card">
             {
@@ -188,9 +252,11 @@ function App() {
               <h6 className="card-subtitle mb-2 text-muted">Password Card</h6>
               <p className="card-text">Check for interested password or reload for a new password.</p>
               <input
-              type="text"
-              value={inputValue}
-              onChange={e => setInputValue(e.target.value)}
+                  className="pcount"
+                  id = "pcount"
+                  type="text"
+                  value={password[0]}
+                  onChange={e => setInputValue(e.target.value)}
               />
               <CopyToClipboard text={inputValue} onCopy={() => setInputValue.length != 0 ? alert("Password Copied!") : null}>
                 <button>Copy</button>
@@ -199,8 +265,8 @@ function App() {
               <br />
 
               <div className="icons">
-              <button  className="card-link" onClick={() => fetchData()}><i className=" icon fa fa-refresh fa-spin"></i></button>
-              <button  className="card-link" onClick={() => alert("You have selected this password")}><i className=" icon fa fa-check"></i></button>
+              <button  className="card-link" onClick={() => changePassword()}><i className=" icon fa fa-refresh fa-spin"></i></button>
+              <button  className="card-link" onClick={() => alert("You have selected this password" + inputValue)}><i className=" icon fa fa-check"></i></button>
               </div>
             </div>
                   :null

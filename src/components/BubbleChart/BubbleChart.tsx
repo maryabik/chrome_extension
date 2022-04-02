@@ -83,6 +83,7 @@ export default class BubbleChart extends React.PureComponent<IBubbleChartProps, 
       const {props} = this
       const fontSize = this.radiusScale((item as unknown as Types.ForceData).size) / 3
       const content = props.bubblesData.length > index ? props.bubblesData[index].name : ''
+      const category = props.bubblesData[index].category
       const strokeColor = props.bubblesData.length > index ? 'black' : this.props.backgroundColor
       return (
          <g
@@ -96,7 +97,8 @@ export default class BubbleChart extends React.PureComponent<IBubbleChartProps, 
                stroke={strokeColor}
                strokeWidth="2"
                onClick={() => {
-                 this.props.selectedCircle(content)
+                 this.props.selectedCircle(category)
+                 alert("You have selected:"+content)
                }}
            />
            <text

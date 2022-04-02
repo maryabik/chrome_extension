@@ -11,6 +11,7 @@ export namespace Types {
     name: string
     size: number
     fillColor: string
+    category: string
   }
 
   export type ForceData = {
