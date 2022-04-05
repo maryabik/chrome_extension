@@ -32,6 +32,7 @@ function App() {
   //show components
   const [show, setShow] = useState(false)
   const [show1, setShow1] = useState(false)
+  const [show2, setShow2] = useState(false)
   const [inputValue, setInputValue] = useState("")
   const [id, setId] = useState("")
   let res;
@@ -48,8 +49,6 @@ function App() {
     };
     fetchPosts();
   }, []);
-
-
 
   const changeData = () => {
     setData1(data1.slice(1, 100).sort(() => Math.random() - 0.5))
@@ -70,7 +69,7 @@ function App() {
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(article)
+        body: JSON.stringify(testWords)
       };
       // console.log(testWords);
       fetch(url, requestOptions)
@@ -86,18 +85,18 @@ console.log(r.status)
 console.log("check")
     if (r.status == 200) {
         // setLoading(false);
+      // if(word.length < 14){
+      //   alert("You have selected less than required words from the bubble clouds. You selected a total of " + word.length + " out of 14 words")
+      // } else {
         getPassword();
+      setShow1(true)
+      // }
     }
   }
 
   const getPassword = () => {
-    if(word.length < 14){
-      alert("You have selected less than required words from the bubble clouds. You selected a total of " + word.length + " out of 14 words")
-    } else {
       axios.get('https://hidden-journey-03583.herokuapp.com/generatePassword/?n=3&client_id=' + id)
           .then(response => setPassword(response.data))
-      setShow1(true)
-    }
   }
 
   if (isLoading) {
@@ -133,6 +132,12 @@ console.log("check")
     console.log(id)
   }
 
+  const continuePassword = () => {
+    setShow2(true)
+    getPassword()
+    console.log(id)
+  }
+
   // @ts-ignore
   return (
     <div className="App">
@@ -162,6 +167,8 @@ console.log("check")
             onChange={e => setId(e.target.value)}
         />
           <button type="button" className="btn btn-dark" onClick={() => setCharts()}>Start</button>
+          <br />
+          <button type="button" className="btn btn-dark twoo" onClick={() => continuePassword()}>Generate Password</button>
     </div>
 
         {
@@ -216,6 +223,34 @@ console.log("check")
                   :null
             }
           </div>
+
+        <div className="card">
+          {
+            show2?
+                <div className="card-body">
+                  <h6 className="card-subtitle mb-2 text-muted">Password Card</h6>
+                  <p className="card-text">Check for interested password or reload for a new password.</p>
+                  <input
+                      className="pcount"
+                      id = "pcount"
+                      type="text"
+                      value={password[0]}
+                      // onChange={e => setInputValue(e.target.value)}
+                  />
+                  {/*<CopyToClipboard text={inputValue} onCopy={() => setInputValue.length != 0 ? alert("Password Copied!") : null}>*/}
+                  {/*  <button>Copy</button>*/}
+                  {/*</CopyToClipboard>*/}
+
+                  <br />
+
+                  <div className="icons">
+                    <button  className="card-link" onClick={() => changePassword()}><i className=" icon fa fa-refresh fa-spin"></i></button>
+                    <button  className="card-link" onClick={() => alert("You have selected this password" + inputValue)}><i className=" icon fa fa-check"></i></button>
+                  </div>
+                </div>
+                :null
+          }
+        </div>
 
       </header>
     </div>
