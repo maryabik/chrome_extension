@@ -108,8 +108,6 @@ console.log("check")
 
     // @ts-ignore
     setWord([...word, key])
-    // eslint-disable-next-line no-alert
-    //  alert(words)
   }
 
   // Change page
@@ -135,7 +133,6 @@ console.log("check")
     console.log(id)
   }
 
-  // @ts-ignore
   // @ts-ignore
   return (
     <div className="App">
@@ -203,7 +200,7 @@ console.log("check")
                   id = "pcount"
                   type="text"
                   value={password[0]}
-                  onChange={e => setInputValue(e.target.value)}
+                  // onChange={e => setInputValue(e.target.value)}
               />
               {/*<CopyToClipboard text={inputValue} onCopy={() => setInputValue.length != 0 ? alert("Password Copied!") : null}>*/}
               {/*  <button>Copy</button>*/}
@@ -224,7 +221,6 @@ console.log("check")
     </div>
 
   );
-
 }
 
 export default App;
