@@ -2,6 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="353b2119-d37c-414c-bf1f-006f8ed16c85" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/build/precache-manifest.abed1fa778f89ed7d9fe0cb8092a5879.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/css/main.4dc2b8cc.chunk.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/css/main.4dc2b8cc.chunk.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.af8b553d.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.af8b553d.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.4d29e7a5.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.4d29e7a5.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +51,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
-  <component name="RunManager" selected="npm.npm  build">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="npm  build" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -76,7 +88,7 @@
       <workItem from="1648827651523" duration="132000" />
       <workItem from="1648827799130" duration="36990000" />
       <workItem from="1649108641217" duration="429000" />
-      <workItem from="1649109133884" duration="7847000" />
+      <workItem from="1649109133884" duration="10274000" />
     </task>
     <task id="LOCAL-00001" summary="- Adding apis">
       <created>1648934198251</created>
@@ -99,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649119139419</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="-fix page number">
+      <created>1649120858652</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649120858652</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

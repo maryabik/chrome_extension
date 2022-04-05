@@ -58,7 +58,7 @@ function App() {
   const setWords = () => {
     console.log(inputValue)
     console.log(password);
-    // @ts-ignore
+
     let testWords =   {
       "choices": ["animals", "animals", "clothes", "animals", "animals", "animals", "animals", "sports", "games", "food", "9", "1", ":(", ":)"]
     }
@@ -85,20 +85,19 @@ function App() {
 console.log(r.status)
 console.log("check")
     if (r.status == 200) {
-        setLoading(true);
+        // setLoading(false);
         getPassword();
-    } else {
-    alert("You have selected less than required words from cloud. You select a total of " + word.length +" instead of 14 words")
+    }
   }
-  }
-
 
   const getPassword = () => {
-   axios.get('https://hidden-journey-03583.herokuapp.com/generatePassword/?n=3&client_id='+ id)
-  .then(response => setPassword(response.data))
-   console.log(password);
-    setLoading(false);
-    setShow1(true)
+    if(word.length < 14){
+      alert("You have selected less than required words from the bubble clouds. You selected a total of " + word.length + " out of 14 words")
+    } else {
+      axios.get('https://hidden-journey-03583.herokuapp.com/generatePassword/?n=3&client_id=' + id)
+          .then(response => setPassword(response.data))
+      setShow1(true)
+    }
   }
 
   if (isLoading) {
@@ -206,9 +205,9 @@ console.log("check")
                   value={password[0]}
                   onChange={e => setInputValue(e.target.value)}
               />
-              <CopyToClipboard text={inputValue} onCopy={() => setInputValue.length != 0 ? alert("Password Copied!") : null}>
-                <button>Copy</button>
-              </CopyToClipboard>
+              {/*<CopyToClipboard text={inputValue} onCopy={() => setInputValue.length != 0 ? alert("Password Copied!") : null}>*/}
+              {/*  <button>Copy</button>*/}
+              {/*</CopyToClipboard>*/}
 
               <br />
 
