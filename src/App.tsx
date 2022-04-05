@@ -89,7 +89,9 @@ console.log("check")
         alert("You have selected less than required words from the bubble clouds. You selected a total of " + word.length + " out of 14 words")
       } else {
         getPassword();
-      setShow1(true)
+        setShow2(false)
+        setShow(false)
+        setShow1(true)
       }
     }
   }
@@ -129,10 +131,14 @@ console.log("check")
 
   const setCharts = () => {
     setShow(true)
+    setShow1(false)
+    setShow2(false)
     console.log(id)
   }
 
   const continuePassword = () => {
+    setShow1(false)
+    setShow(false)
     setShow2(true)
     getPassword()
     console.log(id)

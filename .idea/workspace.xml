@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="353b2119-d37c-414c-bf1f-006f8ed16c85" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/build/precache-manifest.c8f173158cb08177230a9a90fba52d9f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.8eff24a7.chunk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/static/js/main.8eff24a7.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.6f3c4271f4812e8a4c3ffacba5de52c5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.16e5a2d1.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.16e5a2d1.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +86,7 @@
       <workItem from="1648827651523" duration="132000" />
       <workItem from="1648827799130" duration="36990000" />
       <workItem from="1649108641217" duration="429000" />
-      <workItem from="1649109133884" duration="14682000" />
+      <workItem from="1649109133884" duration="15201000" />
     </task>
     <task id="LOCAL-00001" summary="- Adding apis">
       <created>1648934198251</created>
@@ -148,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649128031069</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add another button to generate password">
+      <created>1649128115622</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1649128115622</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
