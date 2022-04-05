@@ -70,7 +70,19 @@
    margin-right: 50px;
 }
 
+.id {
+    margin-top: 90px;
+    margin-right: 250px;
+    width: 250px;
+}
 
 button {
     margin-left: 20px;
+}
+
+.textP {
+    color: black;
+    font-size: 20px;
+    margin-left: 580px;
+    border: 1px solid grey ;
 }

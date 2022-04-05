@@ -1,6 +1,6 @@
 {
-  "name": "Chrome React SEO Extension",
-  "description": "The power of React and TypeScript for building interactive Chrome extensions",
+  "name": "Personalized Password Generator Extension",
+  "description": "The power of memorability",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
