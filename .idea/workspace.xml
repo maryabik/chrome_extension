@@ -1,35 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="353b2119-d37c-414c-bf1f-006f8ed16c85" name="Changes" comment="clean up">
-      <change afterPath="$PROJECT_DIR$/build/precache-manifest.aff3db71e024c77f5878e8bb7c686f0d.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/main.6d61be50.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/main.6d61be50.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/1.5fbdb5cd.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/1.5fbdb5cd.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.6e44c5f5.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.6e44c5f5.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/main.d97f4407.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/main.d97f4407.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/runtime~main.39ff4e22.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/runtime~main.39ff4e22.js.map" afterDir="false" />
+    <list default="true" id="353b2119-d37c-414c-bf1f-006f8ed16c85" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.abed1fa778f89ed7d9fe0cb8092a5879.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.4dc2b8cc.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.4dc2b8cc.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/1.8fff69a2.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/1.8fff69a2.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.76763919.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.76763919.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.af8b553d.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.af8b553d.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/runtime~main.3c2378a1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/runtime~main.3c2378a1.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +40,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.npm  build">
     <configuration name="npm  build" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -103,7 +77,7 @@
       <workItem from="1648827651523" duration="132000" />
       <workItem from="1648827799130" duration="36990000" />
       <workItem from="1649108641217" duration="429000" />
-      <workItem from="1649109133884" duration="14068000" />
+      <workItem from="1649109133884" duration="14242000" />
     </task>
     <task id="LOCAL-00001" summary="- Adding apis">
       <created>1648934198251</created>
@@ -147,7 +121,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649124904798</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add another button to generate password">
+      <created>1649127535610</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1649127535610</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add another button to generate password">
+      <created>1649127609346</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1649127609346</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +154,7 @@
     <MESSAGE value="-fix page number" />
     <MESSAGE value="- remove copy" />
     <MESSAGE value="clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
+    <MESSAGE value="add another button to generate password" />
+    <option name="LAST_COMMIT_MESSAGE" value="add another button to generate password" />
   </component>
 </project>
