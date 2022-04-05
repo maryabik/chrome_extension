@@ -85,12 +85,12 @@ console.log(r.status)
 console.log("check")
     if (r.status == 200) {
         // setLoading(false);
-      // if(word.length < 14){
-      //   alert("You have selected less than required words from the bubble clouds. You selected a total of " + word.length + " out of 14 words")
-      // } else {
+      if(word.length < 14){
+        alert("You have selected less than required words from the bubble clouds. You selected a total of " + word.length + " out of 14 words")
+      } else {
         getPassword();
       setShow1(true)
-      // }
+      }
     }
   }
 
