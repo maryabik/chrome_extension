@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="353b2119-d37c-414c-bf1f-006f8ed16c85" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build/precache-manifest.242327611c0dfe22dc59cf3b10b8ef72.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/main.ff4811a8.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/css/main.ff4811a8.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.76763919.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/2.76763919.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/main.562e2680.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/static/js/main.562e2680.chunk.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.1791e8d9b0bab89a6f8828cef40109e8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.5da1b818.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.5da1b818.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.e3221f68.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.e3221f68.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.c4113f19.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.c4113f19.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +76,7 @@
       <workItem from="1648827651523" duration="132000" />
       <workItem from="1648827799130" duration="36990000" />
       <workItem from="1649108641217" duration="429000" />
-      <workItem from="1649109133884" duration="7180000" />
+      <workItem from="1649109133884" duration="7847000" />
     </task>
     <task id="LOCAL-00001" summary="- Adding apis">
       <created>1648934198251</created>
@@ -110,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649118950608</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="-fix page number">
+      <created>1649119139419</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649119139419</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +115,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="- Adding apis" />
     <MESSAGE value="- Fix spread out bubbles&#10;- add page numbers&#10;- add ids&#10;- add error message with length of words" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fix spread out bubbles&#10;- add page numbers&#10;- add ids&#10;- add error message with length of words" />
+    <MESSAGE value="-fix page number" />
+    <option name="LAST_COMMIT_MESSAGE" value="-fix page number" />
   </component>
 </project>

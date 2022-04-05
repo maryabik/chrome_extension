@@ -65,12 +65,12 @@ function App() {
     const article = { choices: word };
 
     let url = 'https://hidden-journey-03583.herokuapp.com/buildModel?client_id='+id;
-    console.log(testWords);
+    console.log(article);
     try {
       const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(testWords)
+        body: JSON.stringify(article)
       };
       // console.log(testWords);
       fetch(url, requestOptions)
